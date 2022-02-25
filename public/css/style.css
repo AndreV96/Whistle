@@ -1,1 +1,78 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+body {
+  background-color: #0b132b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #5bc0be;
+}
+
+a:hover {
+  color: #7bccca;
+}
+
+.navbar {
+  background-color: #5bc0be;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #1c2541;
+}
+
+.navbar a:hover {
+  color: #3a506b;
+}
+
+.navbar .btn-primary {
+  background-color: #1c2541;
+  border-color: #1c2541;
+  color: #5bc0be;
+  font-weight: 500;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #3a506b;
+  border-color: #3a506b;
+  color: #5bc0be;
+  font-weight: 500;
+}
+
+.container-sm {
+  max-width: 540px;
+}
+
+.btn-primary {
+  background-color: #5bc0be;
+  border-color: #5bc0be;
+  color: #0b132b;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #7bccca;
+  border-color: #5bc0be;
+  color: #0b132b;
+  font-weight: 500;
+}
+
+.card {
+  background-color: #1c2541;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: #3a506b;
+}
+
+.modal-content .modal-header {
+  border-bottom: 1px solid #5bc0be;
+}
+
+.modal-content .form-check-input:checked {
+  background-color: #5bc0be;
+  border-color: #5bc0be;
+}
+/*# sourceMappingURL=style.css.map */
