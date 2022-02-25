@@ -1,0 +1,84 @@
+$dark-blue: #0b132b;
+$dark-navy-blue: #1c2541;
+$navy-blue: #3a506b;
+$blue-green: #5bc0be;
+$blue-green-hover: #7bccca;
+$white: #fff;
+
+body {
+  background-color: $dark-blue;
+  color: $white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $blue-green;
+
+  &:hover {
+    color: $blue-green-hover;
+  }
+}
+
+.navbar {
+  background-color: $blue-green;
+
+  a {
+    text-decoration: none;
+    color: $dark-navy-blue;
+
+    &:hover {
+      color: $navy-blue;
+    }
+  }
+
+  .btn-primary {
+    background-color: $dark-navy-blue;
+    border-color: $dark-navy-blue;
+    color: $blue-green;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $navy-blue;
+      border-color: $navy-blue;
+      color: $blue-green;
+      font-weight: 500;
+    }
+  }
+}
+
+.container-sm {
+  max-width: 540px;
+}
+
+.btn-primary {
+  background-color: $blue-green;
+  border-color: $blue-green;
+  color: $dark-blue;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+    color: $dark-blue;
+    font-weight: 500;
+  }
+}
+
+.card {
+  background-color: $dark-navy-blue;
+  padding: 20px;
+}
+
+.modal-content {
+  background-color: $navy-blue;
+
+  .modal-header {
+    border-bottom: 1px solid $blue-green;
+  }
+
+  .form-check-input:checked {
+    background-color: $blue-green;
+    border-color: $blue-green;
+  }
+}
