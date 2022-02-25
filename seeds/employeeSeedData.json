@@ -1,0 +1,33 @@
+// What do we put here in password?
+[
+  {
+    "first_name":"Carlos",
+    "last_name":"Lezama",
+    "role":"Junior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Gabriela",
+    "last_name":"Beltran",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Andre",
+    "last_name":"Vega",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Camelia",
+    "last_name":"Cruz",
+    "role":"Human Resources",
+    "password": ""
+  },
+  {
+    "first_name":"Alfred",
+    "last_name":"Molina",
+    "role":"Security Tech",
+    "password": ""
+  }
+]

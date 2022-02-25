@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Note Taker App",
+    "description": "The purpose of this project is to create an application where the user will be able to write and save simple notes. These notes then will be saved in the aplication and the user will be able to open any saved notes, delete them or create new ones. This application uses node and Express to create all the http routes needed for reading and adding new information to the json file database.",
+    "manager_id": 1
+  },
+  {
+    "title": "E-Commerce App",
+    "description": "The purpose of this respository is to create an API that will connect with a database that has all the product information from an E-commerce. The repository is a server that connects through all its http routes using node and express to a mysql service. It uses sequelize to establish a connection with the server, create all the table information, seed and corresponding query routes.",
+    "manager_id": 2
+  },
+  {
+    "title": "Employee Tracker",
+    "description": "The Employee Tracker is an application that allows you to store employees information from your group or organization. It lets you store employee's information, role's information and department's information. All this inofrmation is stored in a mysql database that can be accesed and provided with new information at any time.",
+    "manager_id": 3
+  },
+  {
+    "title": "Readme Generator",
+    "description": "The purpose of this project is to create a README Generator to give users an easy to use tool so they can quickly create a README file, already with a template, with the basic information provided by them. With the use of node.js and the inquirer tool, users will be available to run the node index.js command in their terminals and will be prompted with questions regarding the information of their specific porject. Upon answering the questions, the repository will create a README file in the dist folder with all the information provided by the users in an organized template with a table of contents to easily navigate through each section of the README.",
+    "manager_id": 4
+  },
+  {
+    "title": "Team Profile Generator",
+    "description": "The purpose of this project is to create a nodeJS based program that will take the user's input regarding his team member's information, and then generate a styled html file with all the user inputs put in profile cards with the basic contact information of the team members. When the user runs node index in his terminal a series of questions will be prompted to the user.",
+    "manager_id": 5
+  }
+]
