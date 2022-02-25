@@ -27,7 +27,7 @@ Employee.hasMany(Tasks, {
 });
 
 Tasks.belongsTo(Employee, {
-  foreignKey: employee_id,
+  foreignKey: "employee_id",
 });
 
 Projects.hasMany(Tasks, {
@@ -44,7 +44,7 @@ Employee.belongsToMany(Projects, {
     model: ProjectMembers,
     unique: false
   },
-  as: 'project_members'
+  as: 'project_member'
 });
 
 Projects.belongsToMany(Employee, {

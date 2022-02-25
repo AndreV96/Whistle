@@ -1,4 +1,3 @@
-// What do we put here in password?
 [
   {
     "first_name":"Carlos",
@@ -21,7 +20,7 @@
   {
     "first_name":"Camelia",
     "last_name":"Cruz",
-    "role":"Human Resources",
+    "role":"Developer",
     "password": ""
   },
   {
@@ -29,5 +28,35 @@
     "last_name":"Molina",
     "role":"Security Tech",
     "password": ""
+  },
+  {
+    "first_name":"Elvis",
+    "last_name":"Tequito",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Doug",
+    "last_name":"Dimmadome",
+    "role":"Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Nicolas",
+    "last_name":"Tranquilino",
+    "role":"Senior Developer",
+    "password":""
+  },
+  {
+    "first_name":"Masiosare",
+    "last_name":"Perez",
+    "role":"Junior Developer",
+    "password":""
+  },
+  {
+    "first_name":"Jorge",
+    "last_name":"Gonzalez",
+    "role":"Senior Developer",
+    "password":""
   }
 ]
