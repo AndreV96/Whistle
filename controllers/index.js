@@ -1,6 +1,8 @@
 const router = require('express').Router();
-// const apiRoutes = require('./api');
+const apiRoutes = require('./api');
 // const homeRoutes = require('./homeRoutes');
+
+router.use('/api', apiRoutes);
 
 router.use('/', async (req, res) => {
   try {
@@ -9,6 +11,5 @@ router.use('/', async (req, res) => {
     res.status(500).json(error);
   }
 });
-// router.use('/api', apiRoutes);
 
 module.exports = router;

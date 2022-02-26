@@ -1,0 +1,48 @@
+const router = require('express').Router();
+const Employee = require('../../models/employee');
+
+// get all employees
+router.get('/', async (req, res) => {
+  try {
+    const employeeData = await Employee.findAll();
+    res.status(200).json(employeeData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+// Create new employee
+router.post('/', async (req, res) => {
+  try {
+    const newUser = await Employee.create(req.body);
+    req.session.save(() => {
+      req.session.user_id = newUser.id;
+      req.session.logged_in = true;
+
+      res.status(200).json(newUser);
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const userData = await Employee.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!userData) {
+      res.status(404).json({ message: 'No user found with this ID' });
+      return;
+    }
+
+    res.status(200).json(userData);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+module.exports = router;
