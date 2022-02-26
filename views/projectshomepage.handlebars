@@ -1,0 +1,46 @@
+
+<div class="row justify-content-md-end">
+    <button type="button" class="btn btn-primary btn-sm" id= "projectbttn" style="width: 10rem;">Add Project</button>
+  </div>
+
+<div class="row mb-4">
+    <div class="col-sm-3">
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{Employees.first_name}} {{Employees.last_name}}</h5>
+          <p class="card-text">{{Employees.role}}</p>
+        </div>
+      </div>
+      <div class="card text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">My tasks</h5>
+          <p class="card-text">Future: 3</p>
+          <p class="card-text">In progress: 2</p>
+          <p class="card-text">Done: 1</p>
+        </div>
+      </div>
+    </div>
+<div class="col-sm-9">
+
+{{#each projects as |project| }}
+  <div class="row">
+    <div class="card projects">
+      <div class="card-body">
+        <div class="row ">
+          <div class="col-10">
+            <a href="/project/{{project.id}}">{{project.name}}</a>
+            <a class="card-subtitle mb-2 text-muted">{{format_date project.date_created}}</a>
+            <p class="card-text">{{description}}</p>
+            <a>Number of Tasks: 3</a>
+            <a>Employees: 3</a>
+          </div>
+          <div class="col-2">
+              <a href="#" class="btn btn-primary" style="width: 10rem;">Assign Task</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+{{/each}}
