@@ -1,0 +1,62 @@
+[
+  {
+    "first_name":"Carlos",
+    "last_name":"Lezama",
+    "role":"Junior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Gabriela",
+    "last_name":"Beltran",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Andre",
+    "last_name":"Vega",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Camelia",
+    "last_name":"Cruz",
+    "role":"Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Alfred",
+    "last_name":"Molina",
+    "role":"Security Tech",
+    "password": ""
+  },
+  {
+    "first_name":"Elvis",
+    "last_name":"Tequito",
+    "role":"Senior Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Doug",
+    "last_name":"Dimmadome",
+    "role":"Developer",
+    "password": ""
+  },
+  {
+    "first_name":"Nicolas",
+    "last_name":"Tranquilino",
+    "role":"Senior Developer",
+    "password":""
+  },
+  {
+    "first_name":"Masiosare",
+    "last_name":"Perez",
+    "role":"Junior Developer",
+    "password":""
+  },
+  {
+    "first_name":"Jorge",
+    "last_name":"Gonzalez",
+    "role":"Senior Developer",
+    "password":""
+  }
+]

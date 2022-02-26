@@ -19,11 +19,11 @@ Projects.init(
       type: DataTypes.TEXT,
     },
     manager_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       references: {
         model: 'manager',
         key: 'id',
-      },
+      }
     },
   },
   {
