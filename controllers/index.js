@@ -11,5 +11,9 @@ router.use('/', async (req, res) => {
     res.status(500).json(error);
   }
 });
+//Message whenever a user enters an unexisting route
+router.use((req, res) => {
+  res.send('<h1>Wrong Route!</h1>');
+});
 
 module.exports = router;
