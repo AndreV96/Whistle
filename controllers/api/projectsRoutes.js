@@ -21,8 +21,8 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const data = await Projects.findByPk(req.params.id, {
-      //This is not working
-      include: [{ model: Employee }, { model: Tasks }, {model: Manager}],
+      //This does not work when you include employee model, check why in documentation: https://sequelize.org/v7/manual/advanced-many-to-many.html
+      include: [{ model: Tasks }, {model: Manager}],
     });
     if (!data) res.status(404).json({message: "No project found with that id"});
     res.status(200).json(data);
