@@ -1,0 +1,72 @@
+[
+  {
+    "first_name": "Carlos",
+    "last_name": "Lezama",
+    "role": "Junior Developer",
+    "email": "carloszama@yahoo.com.mx",
+    "password": "Carlos123"
+  },
+  {
+    "first_name": "Gabriela",
+    "last_name": "Beltran",
+    "role": "Senior Developer",
+    "email": "gabybeltran@gmail.com",
+    "password": "Gabriela123"
+  },
+  {
+    "first_name": "Andre",
+    "last_name": "Vega",
+    "role": "Senior Developer",
+    "email": "andrevega@gmail.com",
+    "password": "Andre123"
+  },
+  {
+    "first_name": "Camelia",
+    "last_name": "Cruz",
+    "role": "Developer",
+    "email": "GabyBeltran@gmail.com",
+    "password": "Camelia123"
+  },
+  {
+    "first_name": "Alfred",
+    "last_name": "Molina",
+    "role": "Security Tech",
+    "email": "octavius@gmail.com",
+    "password": "Alfred123"
+  },
+  {
+    "first_name": "Elvis",
+    "last_name": "Tequito",
+    "role": "Senior Developer",
+    "email": "elvislives@hotmail.com",
+    "password": "Elvis123"
+  },
+  {
+    "first_name": "Doug",
+    "last_name": "Dimmadome",
+    "role": "Developer",
+    "email": "dimmadome@dome.com",
+    "password": "Doug123"
+  },
+  {
+    "first_name": "Nicolas",
+    "last_name": "Tranquilino",
+    "role": "Senior Developer",
+    "email": "lapazseaportadespartes@gmail.com",
+    "password": "Nicolas123"
+  },
+  {
+    "first_name": "Masiosare",
+    "last_name": "Perez",
+    "role": "Junior Developer",
+    "email": "perezperez@outlook.com",
+    "password": "Masiosare123"
+  },
+  {
+    "first_name": "Jorge",
+    "last_name": "Gonzalez",
+    "role": "Senior Developer",
+    "email": "gonzalezj@hotmail.com",
+    "password": "Jorge123"
+  }
+]
