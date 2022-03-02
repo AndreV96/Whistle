@@ -5,10 +5,10 @@ const projectsRoutes = require('./projectRoutes');
 const tasksRoutes = require('./tasksRoutes');
 const projectMembersRoutes = require('./ProjectMembersRoutes');
 
-router.use('/employeeRoutes', employeeRoutes);
-router.use('/managerRoutes', managerRoutes);
-router.use('/projectRoutes', projectsRoutes);
-router.use('/tasksRoutes', tasksRoutes);
-router.use('/ProjectMembersRoutes', projectMembersRoutes);
+router.use('/employee', employeeRoutes);
+router.use('/manager', managerRoutes);
+router.use('/project', projectsRoutes);
+router.use('/tasks', tasksRoutes);
+router.use('/project-members', projectMembersRoutes);
 
 module.exports = router;
