@@ -1,14 +1,28 @@
 const router = require('express').Router();
-const Employee = require('../../models/employee');
+const { Employee, Projects, Task} = require('../../models');
+
 // get all employees
 router.get('/', async (req, res) => {
   try {
     const employeeData = await Employee.findAll();
     res.status(200).json(employeeData);
   } catch (error) {
-    res.status(500).json(error);
+    res.status(500).json(err);
   }
 });
+
+router.get('/:id', async(req, res) => {
+  try {
+    const employeeData = await Employee.findByPk(req.params.id, {
+      include: [{ model: Employee }],
+    });
+    if(!employeeData) {
+      res.status(404).json({ message: "No employee found with this id" });
+      return
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 // Create new employee
 router.post('/', async (req, res) => {
