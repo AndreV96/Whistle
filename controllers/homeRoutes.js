@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 const {
   Employee,
   Manager,
@@ -9,7 +10,28 @@ const {
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    if (!req.session.logged_in) {
+      res.render('homepage');
+    } else {
+      res.redirect('/projects');
+    }
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
+
+router.get('/projects', withAuth, async (req, res) => {
+  try {
+    const userData = await Employee.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('projectshomepage', {
+      ...user,
+      logged_in: true,
+    });
   } catch (error) {
     res.status(500).json(error);
   }
