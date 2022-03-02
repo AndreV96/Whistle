@@ -18,13 +18,6 @@ Projects.init(
     description: {
       type: DataTypes.TEXT,
     },
-    manager_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'manager',
-        key: 'id',
-      }
-    },
   },
   {
     sequelize,
