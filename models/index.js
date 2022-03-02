@@ -1,26 +1,7 @@
 const Employee = require('./Employee');
-const Manager = require('./Manager');
 const Projects = require('./Projects');
 const Tasks = require('./Tasks');
 const ProjectMembers = require('./ProjectMembers');
-
-Employee.hasOne(Manager, {
-  foreignKey: 'employee_id',
-  onDelete: 'CASCADE',
-});
-
-Manager.belongsTo(Employee, {
-  foreignKey: 'employee_id',
-});
-
-Manager.hasMany(Projects, {
-  foreignKey: 'manager_id',
-  onDelete: 'CASCADE',
-});
-
-Projects.belongsTo(Manager, {
-  foreignKey: 'manager_id',
-});
 
 Employee.hasMany(Tasks, {
   foreignKey: 'employee_id',
@@ -55,4 +36,4 @@ Projects.belongsToMany(Employee, {
   as: 'current_projects'
 });
 
-module.exports = {Employee, Manager, Projects, Tasks, ProjectMembers};
+module.exports = {Employee, Projects, Tasks, ProjectMembers};
