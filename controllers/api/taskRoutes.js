@@ -40,22 +40,22 @@ router.post('/', async (req, res) => {
   }
 })
 
-// router.patch("/:id", async (req, res) => {
-//   try {
-//     const taskData = await Task.update(req.body, {
-//       where: {
-//         id:req.params.id
-//       }
-//     })
-//     if (!taskData[0]) {
-//       res.status(404).json({ message: 'No category with this id' });
-//       return;
-//     }
-//     res.status(200).json(taskData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   } 
-// });
+router.patch("/:id", async (req, res) => {
+  try {
+    const taskData = await Task.update(req.body, {
+      where: {
+        id:req.params.id
+      }
+    })
+    if (!taskData[0]) {
+      res.status(404).json({ message: 'No task with this id' });
+      return;
+    }
+    res.status(200).json(taskData);
+  } catch (err) {
+    res.status(500).json(err);
+  } 
+});
 
 router.delete('/:id', async (req, res) => {
   try {
