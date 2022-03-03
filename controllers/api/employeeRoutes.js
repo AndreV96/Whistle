@@ -11,7 +11,7 @@ const {
 router.get('/', async (req, res) => {
   try {
     const employeeData = await Employee.findAll({
-      include: [{ model: Tasks }]
+      include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }]
     });
     res.status(200).json(employeeData);
   } catch (err) {
@@ -22,12 +22,13 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const data = await Employee.findByPk(req.params.id, {
+      // here
       include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }],
     });
     if (!data) res.status(404).json({ message: 'No Employee found with that id' });
     res.status(200).json(data);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(500).json(err.message);
   }
 });
 // Create new employee
