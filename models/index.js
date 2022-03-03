@@ -25,7 +25,7 @@ Employee.belongsToMany(Projects, {
     model: ProjectMembers,
     unique: false
   },
-  as: 'project_member'
+  as: 'current_projects'
 });
 
 Projects.belongsToMany(Employee, {
@@ -33,7 +33,7 @@ Projects.belongsToMany(Employee, {
     model: ProjectMembers,
     unique: false
   },
-  as: 'current_projects'
+  as: 'project_member'
 });
 
 module.exports = {Employee, Projects, Tasks, ProjectMembers};
