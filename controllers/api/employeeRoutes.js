@@ -5,7 +5,8 @@ const { Employee, Projects, Tasks, ProjectMembers } = require('../../models');
 router.get('/', async (req, res) => {
   try {
     const employeeData = await Employee.findAll({
-      include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }]
+      include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }],
+      attributes: { exclude: ['password'] },
     });
     res.status(200).json(employeeData);
   } catch (err) {
@@ -17,6 +18,7 @@ router.get('/:id', async (req, res) => {
   try {
     const data = await Employee.findByPk(req.params.id, {
       include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }],
+      attributes: { exclude: ['password'] },
     });
     if (!data)
       res.status(404).json({ message: 'No Employee found with that id' });

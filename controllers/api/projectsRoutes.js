@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
         { model: Tasks },
         { model: Employee, through: ProjectMembers, as: 'project_member' },
       ],
+      attributes: { exclude: ['password'] },
     });
     res.status(200).json(data);
   } catch (err) {
@@ -22,6 +23,8 @@ router.get('/:id', async (req, res) => {
         { model: Tasks },
         { model: Employee, through: ProjectMembers, as: 'project_member' },
       ],
+      //This below is not working, password is still showing
+      attributes: { exclude: ['password'] },
     });
     if (!data)
       res.status(404).json({ message: 'No project found with that id' });
