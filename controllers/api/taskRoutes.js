@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Employee, Projects, Tasks, ProjectMembers } = require('../../models');
 const Task = require('../../models/Tasks');
-
+//Get All Tasks Information
 router.get('/', async (req, res) => {
   try {
     const data = await Tasks.findAll({
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//Get Taks Information by ID
 router.get('/:id', async (req, res) => {
   try {
     const data = await Tasks.findByPk(req.params.id, {
@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//Create New Task
 router.post('/', async (req, res) => {
   try {
     const taskData = await Tasks.create(req.body);
@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//Update Task Information
 router.patch('/:id', async (req, res) => {
   try {
     const taskData = await Task.update(req.body, {
@@ -50,7 +50,7 @@ router.patch('/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+//Delete Existing Task
 router.delete('/:id', async (req, res) => {
   try {
     const taskData = await Tasks.destroy({
