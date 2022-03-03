@@ -1,17 +1,12 @@
 const router = require('express').Router();
-const {
-  Employee,
-  Projects,
-  Tasks,
-  ProjectMembers,
-} = require('../../models');
+const { Employee, Projects, Tasks, ProjectMembers } = require('../../models');
 
 // get all employees
 
 router.get('/', async (req, res) => {
   try {
     const employeeData = await Employee.findAll({
-      include: [{ model: Tasks }]
+      include: [{ model: Tasks }],
     });
     res.status(200).json(employeeData);
   } catch (err) {
@@ -22,9 +17,13 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const data = await Employee.findByPk(req.params.id, {
-      include: [{ model: Tasks }, { model: Projects, through: ProjectMembers, as: 'current_projects' }],
+      include: [
+        { model: Tasks },
+        { model: Projects, through: ProjectMembers, as: 'current_projects' },
+      ],
     });
-    if (!data) res.status(404).json({ message: 'No Employee found with that id' });
+    if (!data)
+      res.status(404).json({ message: 'No Employee found with that id' });
     res.status(200).json(data);
   } catch (err) {
     res.status(500).json(err);
@@ -97,5 +96,17 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+module.exports = router;
 
 module.exports = router;
