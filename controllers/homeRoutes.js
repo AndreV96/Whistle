@@ -1,11 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
-const {
-  Employee,
-  Projects,
-  Tasks,
-  ProjectMembers,
-} = require('../models');
+const { Employee, Projects, Tasks, ProjectMembers } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
@@ -22,6 +17,10 @@ router.get('/', async (req, res) => {
 router.get('/projects', withAuth, async (req, res) => {
   try {
     const userData = await Employee.findByPk(req.session.user_id, {
+      include: [
+        { model: Tasks },
+        { model: Projects, through: ProjectMembers, as: 'current_projects' },
+      ],
       attributes: { exclude: ['password'] },
     });
 
@@ -31,6 +30,8 @@ router.get('/projects', withAuth, async (req, res) => {
       ...user,
       logged_in: true,
     });
+    console.log(user);
+    console.log(user.current_projects.project_member);
   } catch (error) {
     res.status(500).json(error);
   }
