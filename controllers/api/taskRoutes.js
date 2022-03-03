@@ -1,10 +1,5 @@
 const router = require('express').Router();
-const {
-  Employee,
-  Projects,
-  Tasks,
-  ProjectMembers,
-} = require('../../models');
+const { Employee, Projects, Tasks, ProjectMembers } = require('../../models');
 const Task = require('../../models/Tasks');
 
 router.get('/', async (req, res) => {
@@ -39,13 +34,13 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.patch("/:id", async (req, res) => {
+router.patch('/:id', async (req, res) => {
   try {
     const taskData = await Task.update(req.body, {
       where: {
-        id:req.params.id
-      }
-    })
+        id: req.params.id,
+      },
+    });
     if (!taskData[0]) {
       res.status(404).json({ message: 'No task with this id' });
       return;
@@ -53,7 +48,7 @@ router.patch("/:id", async (req, res) => {
     res.status(200).json(taskData);
   } catch (err) {
     res.status(500).json(err);
-  } 
+  }
 });
 
 router.delete('/:id', async (req, res) => {
