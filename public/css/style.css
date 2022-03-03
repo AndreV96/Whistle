@@ -63,6 +63,16 @@ a:hover {
   padding: 20px;
 }
 
+.projects {
+  padding: 20px;
+}
+
+#projectbttn {
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: #a4e6e4;
+}
+
 .modal-content {
   background-color: #3a506b;
 }
