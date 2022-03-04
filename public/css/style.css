@@ -123,6 +123,10 @@ a:hover {
   margin-top: 20px;
 }
 
+.card .btn-danger {
+  margin-top: 10px;
+}
+
 .col-sm-3 {
   min-width: 290px;
 }
@@ -156,6 +160,7 @@ a:hover {
   .col-sm-3 {
     min-width: 100%;
     width: 100%;
+    padding: 0;
   }
   .col-sm-3 .card {
     min-width: 100%;
@@ -165,13 +170,44 @@ a:hover {
     width: 100%;
   }
   .container-xxl {
-    padding: 0 30px;
+    padding: 0 40px;
   }
   .justify-content-md-end {
     -webkit-box-pack: end !important;
         -ms-flex-pack: end !important;
             justify-content: flex-end !important;
     margin-right: 0;
+  }
+}
+
+@media all and (max-width: 748px) {
+  .logo {
+    height: 50px;
+  }
+  .container-xxl {
+    padding: 0 20px;
+  }
+  .col-9,
+  .col-3 {
+    min-width: 100%;
+  }
+  .card .btn-danger {
+    margin: 0;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  .projects .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .projects .row .btn-col {
+    margin-bottom: 10px;
+  }
+  .projects .row #delete-task {
+    margin-top: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
