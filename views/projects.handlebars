@@ -16,33 +16,33 @@
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
-              <p class="card-title">Project Tasks Status:</p>
-              <p class="card-text">Future: {{task.state}}</p>
-              <p class="card-text">In Progress: {{task.state}</p>
-              <p class="card-text">Done: {{task.state}}</p>
+              <p class="card-title">Project Tasks Status: {{tasks.length}} </p>
+              {{!-- <p class="card-text">Future: {{task.state}}</p>
+              <p class="card-text">In Progress: {{task.state}}</p>
+              <p class="card-text">Done: {{task.state}}</p> --}}
             </div>
           </div>
           <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
               <p class="card-title">Employees in this project:</p>
-            {{#each employee_id}}
-              <a class="card-text">{{this}}</a>
-              {{/each}}
+                {{#each project_member}}
+                    <a class="card-text block">{{first_name}} {{last_name}} </a>
+                {{/each}} 
     </div>
   </div>
 </div>
 
 <div class="col-sm-9">
     
-{{#each current_tasks as |task| }}
+{{#each tasks as |task| }}
       <div class="row">
         <div class="card projects">
           <div class="card-body">
             <div class="row ">
               <div class="col-10">
-                <a href="/project/{{task.id}}">{{task.title}}</a>
-                <a class="card-subtitle mb-2 text-muted">Due date: {{format_date task.due_date}}</a>
-                <p class="card-text">{{task.description}}</p>
+                <a href="/project/{{id}}">{{title}}</a>
+                <a class="card-subtitle mb-2 text-muted">Due date: {{format_date due_date}}</a>
+                <p class="card-text">{{description}}</p>
               </div>
               <div class="col-2">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle='dropdown' aria-haspopup="true" aria-expanded="false" style="width: 10rem;">Status</button>
@@ -64,10 +64,6 @@
 
 <!-- New Task Modal -->
 
-<<<<<<< HEAD
--->
-<h1>hey</h1>
-=======
 <div class="modal" id="taskBttn">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -96,13 +92,13 @@
        min="2022-03-01" max="2025-12-31">
         </div>
 
-        <div class="form-check">
+        {{!-- <div class="form-check">
           <p>Assign Employee</p>
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
            <!-- {{#each employee_id}} -->
           <label class="form-check-label" for="flexCheckDefault">{{this}}</label>
            <!-- {{#each}} -->
-        </div>
+        </div> --}}
 
         <div class="modal-footer d-flex justify-content-center">
           <button class="btn btn-unique" id="addTask"><i class="fas fa-paper-plane-o ml-1">Add</i></button>
@@ -111,8 +107,7 @@
     </div>
   </div>
 </div>
-
+<script src="/js/project.js"></script>
 <!--Modal -->
 
     
->>>>>>> main
