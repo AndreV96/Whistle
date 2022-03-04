@@ -1,7 +1,7 @@
 $dark-blue: #0b132b;
 $dark-navy-blue: #1c2541;
 $navy-blue: #3a506b;
-$blue-green: #5bc0be;
+$blue-green: rgb(91, 192, 190);
 $blue-green-hover: #7bccca;
 $white: #fff;
 
@@ -63,11 +63,25 @@ a {
     color: $dark-blue;
     font-weight: 500;
   }
+
+  &:active {
+    color: $dark-blue;
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+  }
+
+  &:focus {
+    color: $dark-blue;
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+    box-shadow: 0 0 0 0.25rem rgba(91, 192, 190, 0.5);
+  }
 }
 
 .card {
   background-color: $dark-navy-blue;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .modal-content {
@@ -81,4 +95,8 @@ a {
     background-color: $blue-green;
     border-color: $blue-green;
   }
+}
+
+.project-title {
+  font-size: 20px;
 }
