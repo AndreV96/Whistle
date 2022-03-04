@@ -58,10 +58,24 @@ a:hover {
   font-weight: 500;
 }
 
+.btn-primary:active {
+  color: #0b132b;
+  background-color: #7bccca;
+  border-color: #5bc0be;
+}
+
+.btn-primary:focus {
+  color: #0b132b;
+  background-color: #7bccca;
+  border-color: #5bc0be;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(91, 192, 190, 0.5);
+          box-shadow: 0 0 0 0.25rem rgba(91, 192, 190, 0.5);
+}
+
 .card {
   background-color: #1c2541;
   padding: 20px;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .modal-content {
@@ -75,5 +89,9 @@ a:hover {
 .modal-content .form-check-input:checked {
   background-color: #5bc0be;
   border-color: #5bc0be;
+}
+
+.project-title {
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
