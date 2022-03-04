@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.from('.navbar', { y: '-200%' });
 gsap.from('.logo', { opacity: 0, x: '-100%', delay: 0.5 });
-gsap.from('.nav-link', { opacity: 0, x: '100%', delay: 0.5 });
+gsap.from('.fade-in-right', { opacity: 0, x: '100%', delay: 0.5 });
 gsap.from('.login-card', {
   duration: 0.8,
   opacity: 0,

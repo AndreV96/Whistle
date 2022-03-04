@@ -1,7 +1,7 @@
 $dark-blue: #0b132b;
 $dark-navy-blue: #1c2541;
 $navy-blue: #3a506b;
-$blue-green: rgb(91, 192, 190);
+$blue-green: #5bc0be;
 $blue-green-hover: #7bccca;
 $white: #fff;
 
@@ -61,7 +61,6 @@ a {
     background-color: $blue-green-hover;
     border-color: $blue-green;
     color: $dark-blue;
-    font-weight: 500;
   }
 
   &:active {
@@ -78,10 +77,66 @@ a {
   }
 }
 
+.btn-outline-primary {
+  color: $blue-green;
+  border-color: $blue-green;
+  font-weight: 500;
+
+  &:hover {
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+    color: $dark-blue;
+  }
+
+  &:checked {
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+    color: $dark-blue;
+  }
+
+  &:active {
+    color: $dark-blue;
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+  }
+
+  &:focus {
+    color: $dark-blue;
+    background-color: $blue-green-hover;
+    border-color: $blue-green;
+    box-shadow: 0 0 0 0.25rem rgba(91, 192, 190, 0.5);
+  }
+}
+
+.btn-check:checked + .btn-outline-primary {
+  background-color: $blue-green-hover;
+  border-color: $blue-green;
+  color: $dark-blue;
+}
+
+.btn-check:checked + .btn-outline-primary:focus {
+  color: $dark-blue;
+  background-color: $blue-green-hover;
+  border-color: $blue-green;
+  box-shadow: 0 0 0 0.25rem rgba(91, 192, 190, 0.5);
+}
+
 .card {
   background-color: $dark-navy-blue;
   padding: 20px;
   margin-top: 20px;
+}
+
+.col-sm-3 {
+  min-width: 290px;
+
+  .card {
+    min-width: 288px;
+  }
+}
+
+.col-sm-9 {
+  min-width: 75%;
 }
 
 .modal-content {
@@ -99,4 +154,29 @@ a {
 
 .project-title {
   font-size: 20px;
+}
+
+@media all and (max-width: 1161px) {
+  .col-sm-3 {
+    min-width: 100%;
+    width: 100%;
+
+    .card {
+      min-width: 100%;
+    }
+  }
+
+  .col-sm-9 {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .container-xxl {
+    padding: 0 30px;
+  }
+
+  .justify-content-md-end {
+    justify-content: flex-end !important;
+    margin-right: 0;
+  }
 }
