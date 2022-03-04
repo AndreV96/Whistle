@@ -33,7 +33,7 @@
             <p class="card-text">{{project.description}}</p>
           </div>
           <div class="col-2">
-              <button type="button" class="btn btn-primary btn-sm" id= "editProjectBttn" style="width: 10rem;">View Project</button>
+              <button  onclick="viewProject({{project.id}})" type="button" class="btn btn-primary btn-sm editProjectBttn"style="width: 10rem;">Go To Project</button>
           </div>
         </div>
         </div>
@@ -68,4 +68,4 @@
     </div>
   </div>
 </div>
-<script src="js/projectsHomepage.js"></script>
+<script src="/js/projectsHomepage.js"></script>
