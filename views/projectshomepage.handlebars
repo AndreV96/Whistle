@@ -29,7 +29,7 @@
       <div class="card-body">
         <div class="row ">
           <div class="col-10">
-            <a href="/project/{{project.id}}" class="project-title">{{project.title}}</a>
+            <a href="/projects/{{project.id}}" class="project-title">{{project.title}}</a>
             <p class="card-text">{{project.description}}</p>
           </div>
           <div class="col-2">
@@ -62,7 +62,12 @@
             <label for='description' class='form-label'>Description</label>
             <textarea type='text' class='form-control' id='description' rows="4"></textarea>
           </div>
-          <button type='submit' class='btn btn-primary'>Add project</button>
+          <div>
+            {{#each employees as |employee| }}
+              h5 class="card-title">{{first_name}} {{last_name}}</h5>
+            {{/each}}
+          </div>
+          <button id="createProjectBttn" type='submit' class='btn btn-primary'>Add project</button>
         </form>
       </div>
     </div>

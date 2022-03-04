@@ -1,28 +1,4 @@
-//COMO agregar employees al project?
-const newProject = async (e) => {
-  e.preventDefault();
-  const title = document.querySelector('#title').value.trim();
-  const description = document.querySelector('#description').value.trim();
 
-  if (title && description) {
-    //add employee id
-    const body = JSON.stringify({ title, description, });
-    console.log(body);
-    const response = await fetch(`/api/projects`, {
-      method: 'POST',
-      body,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response.ok) {
-      console.log(`${title}: ${description}`);
-    } else {
-      alert('Failed to create project');
-    }
-  }
-};
 //COMO CONSIGUES EL ID PARA DELETE, PATCH, ETC?
 const deleteProject = async (e) => {
   e.preventDefault();

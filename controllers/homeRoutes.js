@@ -64,7 +64,6 @@ router.get('/projects/:id', withAuth, async (req, res) => {
     });
 
     const project = data.get({ plain: true });
-    console.log(project)
     res.render('projects', {
       ...project,
       logged_in: true,
