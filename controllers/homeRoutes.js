@@ -19,7 +19,19 @@ router.get('/projects', withAuth, async (req, res) => {
     const userData = await Employee.findByPk(req.session.user_id, {
       include: [
         { model: Tasks },
-        { model: Projects, through: ProjectMembers, as: 'current_projects' },
+        {
+          model: Projects,
+          through: ProjectMembers,
+          as: 'current_projects',
+          include: {
+            model: Employee,
+            through: ProjectMembers,
+            as: 'project_member',
+            attributes: {
+              exclude: ['password'],
+            },
+          },
+        },
       ],
       attributes: { exclude: ['password'] },
     });
