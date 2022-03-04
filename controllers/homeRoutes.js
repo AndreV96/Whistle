@@ -49,4 +49,29 @@ router.get('/projects', withAuth, async (req, res) => {
   }
 });
 
+router.get('/projects/:id', withAuth, async (req, res) => {
+  try {
+    const data = await Projects.findByPk(req.params.id, {
+      include: [
+        { model: Tasks },
+        {
+          model: Employee,
+          through: ProjectMembers,
+          as: 'project_member',
+          attributes: { exclude: ['password'] },
+        },
+      ],
+    });
+
+    const project = data.get({ plain: true });
+
+    res.render('projects', {
+      ...project,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+});
+
 module.exports = router;
