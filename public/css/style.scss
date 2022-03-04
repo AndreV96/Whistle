@@ -125,6 +125,10 @@ a {
   background-color: $dark-navy-blue;
   padding: 20px;
   margin-top: 20px;
+
+  .btn-danger {
+    margin-top: 10px;
+  }
 }
 
 .col-sm-3 {
@@ -160,6 +164,7 @@ a {
   .col-sm-3 {
     min-width: 100%;
     width: 100%;
+    padding: 0;
 
     .card {
       min-width: 100%;
@@ -172,11 +177,50 @@ a {
   }
 
   .container-xxl {
-    padding: 0 30px;
+    padding: 0 40px;
   }
 
   .justify-content-md-end {
     justify-content: flex-end !important;
     margin-right: 0;
+  }
+}
+
+@media all and (max-width: 748px) {
+  .logo {
+    height: 50px;
+  }
+
+  .container-xxl {
+    padding: 0 20px;
+  }
+
+  .col-9,
+  .col-3 {
+    min-width: 100%;
+  }
+
+  .card {
+    .btn-danger {
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    padding: 10px;
+  }
+
+  .projects {
+    .row {
+      flex-direction: column-reverse;
+
+      .btn-col {
+        margin-bottom: 10px;
+      }
+
+      #delete-task {
+        margin-top: 10px;
+      }
+    }
   }
 }
