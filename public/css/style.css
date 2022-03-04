@@ -61,6 +61,7 @@ a:hover {
 .card {
   background-color: #1c2541;
   padding: 20px;
+  margin-top: 15px;
 }
 
 .modal-content {
