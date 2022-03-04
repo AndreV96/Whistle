@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     const data = await Projects.findAll({
       include: [
         { model: Tasks },
-        { model: Employee, through: ProjectMembers, as: 'project_member' },
+        { model: Employee, through: ProjectMembers, as: 'project_member', attributes: { exclude: ['password'] } },
       ],
       attributes: { exclude: ['password'] },
     });
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
     const data = await Projects.findByPk(req.params.id, {
       include: [
         { model: Tasks },
-        { model: Employee, through: ProjectMembers, as: 'project_member' },
+        { model: Employee, through: ProjectMembers, as: 'project_member', attributes: { exclude: ['password'] } },
       ],
       //This below is not working, password is still showing
       attributes: { exclude: ['password'] },

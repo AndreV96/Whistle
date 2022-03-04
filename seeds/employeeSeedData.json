@@ -4,69 +4,69 @@
     "last_name": "Lezama",
     "role": "Junior Developer",
     "email": "carloszama@yahoo.com.mx",
-    "password": "Carlos123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Gabriela",
     "last_name": "Beltran",
     "role": "Senior Developer",
     "email": "gabybeltran@gmail.com",
-    "password": "Gabriela123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Andre",
     "last_name": "Vega",
     "role": "Senior Developer",
     "email": "andrevega@gmail.com",
-    "password": "Andre123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Camelia",
     "last_name": "Cruz",
     "role": "Developer",
     "email": "GabyBeltran@gmail.com",
-    "password": "Camelia123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Alfred",
     "last_name": "Molina",
     "role": "Security Tech",
     "email": "octavius@gmail.com",
-    "password": "Alfred123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Elvis",
     "last_name": "Tequito",
     "role": "Senior Developer",
     "email": "elvislives@hotmail.com",
-    "password": "Elvis123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Doug",
     "last_name": "Dimmadome",
     "role": "Developer",
     "email": "dimmadome@dome.com",
-    "password": "Doug123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Nicolas",
     "last_name": "Tranquilino",
     "role": "Senior Developer",
     "email": "lapazseaportadespartes@gmail.com",
-    "password": "Nicolas123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Masiosare",
     "last_name": "Perez",
     "role": "Junior Developer",
     "email": "perezperez@outlook.com",
-    "password": "Masiosare123"
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   },
   {
     "first_name": "Jorge",
     "last_name": "Gonzalez",
     "role": "Senior Developer",
-    "email": "gonzalezj@hotmail.com",
-    "password": "Jorge123"
+    "email": "ventas@ventas.com",
+    "password": "$2b$10$ZxXej5zeVQIIbiaSpxW.UOaekyGpPmLwMeqt4TOUUI2mAodH84leO"
   }
 ]
