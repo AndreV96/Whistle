@@ -11,7 +11,7 @@ GitHub Repo: https://github.com/AndreV96/project-2
 
 Heroku page demo: https://limitless-plateau-15055.herokuapp.com/
 
-![Heroku Deployment Page]((./public/images/homepage.png)
+![Heroku Deployment Page](./public/images/homepage.png)
 
 ## Table of Contents 
 
