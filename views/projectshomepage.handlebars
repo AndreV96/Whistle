@@ -1,5 +1,5 @@
 <div class="row justify-content-md-end" style="margin-top: 20px;">
-    <button type="button" class="btn btn-primary btn-sm nav-link" id="projectbttn" data-bs-toggle='modal'
+    <button type="button" class="btn btn-primary btn-sm fade-in-right" id="projectbttn" data-bs-toggle='modal'
             data-bs-target='#add-project' style="width: 10rem; font-weight: bold; font-size: 18px">Add Project</button>
   </div>
 
@@ -11,14 +11,14 @@
           <p class="card-text">{{role}}</p>
         </div>
       </div>
-      <div class="card text-center fade-down-animation" style="width: 18rem;">
+      {{!-- <div class="card text-center fade-down-animation" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">My tasks</h5>
           <p class="card-text">Future: 3</p>
           <p class="card-text">In progress: 2</p>
           <p class="card-text">Done: 1</p>
         </div>
-      </div>
+      </div> --}}
     </div>
 
 <div class="col-sm-9">
@@ -33,7 +33,7 @@
             <p class="card-text">{{project.description}}</p>
           </div>
           <div class="col-2">
-              <button  onclick="viewProject({{project.id}})" type="button" class="btn btn-primary btn-sm editProjectBttn"style="width: 10rem;">Go To Project</button>
+              <button  onclick="viewProject({{project.id}})" type="button" class="btn btn-primary btn-sm editProjectBttn"style="width: 10rem; font-weight: 600; font-size: 16px">Go To Project</button>
           </div>
         </div>
         </div>
@@ -67,7 +67,7 @@
               h5 class="card-title">{{first_name}} {{last_name}}</h5>
             {{/each}}
           </div>
-          <button id="createProjectBttn" type='submit' class='btn btn-primary'>Add project</button>
+          <button data-id="{{id}}" id="createProjectBttn" type='submit' class='btn btn-primary'>Add project</button>
         </form>
       </div>
     </div>

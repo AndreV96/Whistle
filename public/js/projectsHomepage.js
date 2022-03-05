@@ -5,11 +5,14 @@ const viewProject = (id) => {
     window.alert('No project found with the id');
   }
 };
+
+//Esta cargando la pagina antes de hacer el post, por eso no aparece el file . mmetele prevent default, y hazle un reload a la pagina
 const newProject = async (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value.trim();
   const description = document.querySelector('#description').value.trim();
-  const employeeIds = [];
+  const id = document.querySelector('#createProjectBttn').dataset.id;
+  const employeeIds = [id];
   if (title && description) {
     const body = JSON.stringify({ title, description, employeeIds });
     const response = await fetch(`/api/projects`, {
@@ -21,6 +24,7 @@ const newProject = async (e) => {
     });
     if (response.ok) {
       console.log(`${title}: ${description}`);
+      document.location.replace(`/projects/`);
     } else {
       alert('Failed to create project');
     }
@@ -30,3 +34,4 @@ const newProject = async (e) => {
 document
   .querySelector('#createProjectBttn')
   .addEventListener('click', newProject);
+
