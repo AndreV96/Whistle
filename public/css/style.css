@@ -156,6 +156,11 @@ a:hover {
   font-size: 20px;
 }
 
+.block {
+  display: block;
+  color: #5bc0be;
+}
+
 @media all and (max-width: 1161px) {
   .col-sm-3 {
     min-width: 100%;

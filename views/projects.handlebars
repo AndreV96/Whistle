@@ -41,22 +41,22 @@
             <div class="row ">
               <div class="col">
                 <span style="font-weight: 600; font-size: 18px;">{{title}}</span>
-                <span class="card-subtitle mb-2 text-muted"> Due date: {{format_date due_date}}</span>
+                <span class="card-subtitle mb-2 block"> Due date: {{format_date due_date}}</span>
                 <p class="card-text">{{description}}</p>
               </div>
               <div class="col btn-col" style="text-align: end;">
                 <div class="btn-group" role="group{{title}}" aria-label="{{task}}-radio-btns">
-                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-pending" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="{{title}}-pending">Pending</label>
+                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-pending" autocomplete="off" {{#if (ischecked state "Pending")}}checked="checked"{{/if}}> 
+                  <label id="Pending" onclick="changeStateOfTask('Pending', {{id}})" class="btn btn-outline-primary" for="{{title}}-pending">Pending</label>
 
-                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-progress" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="{{title}}-progress">In progress</label>
+                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-progress" autocomplete="off" {{#if (ischecked state "In Progress")}}checked="checked"{{/if}}>
+                  <label id="InProgress" onclick="changeStateOfTask('In Progress', {{id}})" class="btn btn-outline-primary" for="{{title}}-progress">In Progress</label>
 
-                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-finished" autocomplete="off">
-                  <label class="btn btn-outline-primary" for="{{title}}-finished">Finished</label>
+                  <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-finished" autocomplete="off" {{#if (ischecked state "Finished")}}checked="checked"{{/if}}>
+                  <label onclick="changeStateOfTask('Finished', {{id}})" class="btn btn-outline-primary" for="{{title}}-finished">Finished</label>
                 </div>
                 <div>
-             <button type="button" class="btn btn-danger" id="delete-task" style="width: 10rem; font-weight: 600; font-size: 16px;">Delete Task</button>
+             <button onclick="deleteTask({{id}})" type="button" class="btn btn-danger" id="delete-task" style="width: 10rem; font-weight: 600; font-size: 16px;">Delete Task</button>
 
                 </div>
               </div>
@@ -80,7 +80,7 @@
         <form id='new-project-form'>
           <div class='mb-3'>
             <label for='title' class='form-label'>Title</label>
-            <input type='text' class='form-control' id='title' />
+            <input type='text' class='form-control' id='title' data-id="{{id}}" />
           </div>
           <div class='mb-3'>
             <label for='description' class='form-label'>Description</label>
@@ -91,7 +91,7 @@
         <input type="date" id="dueDate" name="due-date" value="2022-03-06"
        min="2022-03-01" max="2025-12-31">
         </div>
-          <button type='submit' class='btn btn-primary'>Add task</button>
+          <button id="addTaskBttn" type='submit' class='btn btn-primary'>Add task</button>
         </form>
       </div>
     </div>

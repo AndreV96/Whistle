@@ -11,7 +11,21 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({
+  helpers: {
+    format_date: (date) => {
+      // Format date as MM/DD/YYYY
+      return date.toLocaleDateString();
+    },
+    format_amount: (amount) => {
+      // format large numbers with commas
+      return parseInt(amount).toLocaleString();
+    },
+    ischecked: function(currentState, bttnState) {
+      return currentState === bttnState;
+    },
+  },
+});
 
 const sess = {
   secret: 'Super secret secret',
