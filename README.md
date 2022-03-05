@@ -5,6 +5,8 @@
 
 This project is a web-page designed with the purpose of managing projects. When you Sign-up you get the chance to add new projects with a title and a description. Inside the project you can add tasks with their title, description and due date. Once created you get to set the task as pending, in progress or finished. When you reach you finish the task or project you can eliminate them.
 
+Live: https://limitless-plateau-15055.herokuapp.com/
+
 GitHub Repo: https://github.com/AndreV96/project-2
 
 ## Table of Contents 
