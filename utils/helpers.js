@@ -7,4 +7,7 @@ module.exports = {
     // format large numbers with commas
     return parseInt(amount).toLocaleString();
   },
+  ischecked: function (currentState, bttnState) {
+    return currentState === bttnState;
+  },
 };

@@ -6,7 +6,6 @@ const viewProject = (id) => {
   }
 };
 
-//Esta cargando la pagina antes de hacer el post, por eso no aparece el file . mmetele prevent default, y hazle un reload a la pagina
 const newProject = async (e) => {
   e.preventDefault();
   const title = document.querySelector('#title').value.trim();
@@ -27,6 +26,22 @@ const newProject = async (e) => {
       document.location.replace(`/projects/`);
     } else {
       alert('Failed to create project');
+    }
+  }
+};
+
+const deleteProject = async (id) => {
+  if (id) {
+    const response = await fetch(`/api/projects/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      document.location.replace(`/projects/`);
+    } else {
+      alert('Failed to delete task');
     }
   }
 };

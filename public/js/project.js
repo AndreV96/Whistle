@@ -30,11 +30,8 @@ const newTask = async (e) => {
   }
 };
 
-const changeStateOfTask = async (e) => {
-  e.preventDefault();
-  const id = document.querySelector('#taskId').value.trim();
-  const state = document.querySelector('#currentStatus').value.trim();
-  if (state) {
+const changeStateOfTask = async (state, id) => {
+  if (state && id) {
     const body = JSON.stringify({ state });
     const response = await fetch(`/api/tasks/${id}`, {
       method: 'PATCH',
@@ -43,24 +40,25 @@ const changeStateOfTask = async (e) => {
         'Content-Type': 'application/json',
       },
     });
-    if (response.ok) {
-      console.log(`State of Task modified`);
-    } else {
-      alert('Failed to update task');
-    }
+    if (!response.ok) alert('Failed to update task status');
   }
 };
 
-const deleteTask = async (e) => {
-  e.preventDefault();
-  const id = document.querySelector('#taskId').value.trim();
-  const response = await fetch(`/api/tasks/${id}`, {
-    method: 'DELETE',
-    body,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+const deleteTask = async (id) => {
+  const project_id = document.querySelector('#title').dataset.id;
+  if (id) {
+    const response = await fetch(`/api/tasks/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      document.location.replace(`/projects/${project_id}`);
+    } else {
+      alert('Failed to delete task');
+    }
+  }
 };
 
 document.querySelector('#addTaskBttn').addEventListener('click', newTask);
