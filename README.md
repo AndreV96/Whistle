@@ -9,9 +9,15 @@ Live: https://limitless-plateau-15055.herokuapp.com/
 
 GitHub Repo: https://github.com/AndreV96/project-2
 
+Heroku page demo: https://limitless-plateau-15055.herokuapp.com/
+
+![Alt text](herokudeployment.png "Heroku Deployment Example")
+
 ## Table of Contents 
 
 - [Installation](#installation)
+
+- [Technologies Used](#technologies)
 
 - [Usage](#usage)
 
@@ -23,6 +29,7 @@ GitHub Repo: https://github.com/AndreV96/project-2
 
 - [Questions](#questions)
 
+
 ## Installation
 
 To install necessary dependencies, follow the next steps and run these commands:
@@ -30,6 +37,19 @@ To install necessary dependencies, follow the next steps and run these commands:
 ```bash
 npm i
 ```
+
+## Technologies 
+- HTML
+- SASS / CSS
+- JavaScript
+- Node.js 
+- Express.js
+- Handlebars.js
+- MySQL
+- Insomnia
+- Heroku
+- Bootstrap
+- GreenSock Animation Platform
 
 ## Usage
 
@@ -43,7 +63,7 @@ This project is licensed under the MIT license
 
 Contributors:
 - AndreV96
-- saacgalvan10
+- isaacgalvan10
 - dinoabrego
 - leogzz0
 
