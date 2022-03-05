@@ -9,21 +9,21 @@
   {
     "title":"Create Seeds",
     "description":"Create seeds for all databases.",
-    "state":"In Process",
+    "state":"In Progress",
     "due_date": "2022-04-22",
     "project_id": 1
   },
   {
     "title":"Create Main Page HTML",
     "description":"Generate HTML with handlebars for the main page.",
-    "state":"Done",
+    "state":"Finished",
     "due_date": "2022-04-22",
     "project_id": 2
   },
   {
     "title":"Create Models",
     "description":"Create Models for all databases.",
-    "state":"In Process",
+    "state":"In Progress",
     "due_date": "2022-04-22",
     "project_id": 2
   },
@@ -44,21 +44,21 @@
   {
     "title":"Create Seeds",
     "description":"Create seeds for all databases.",
-    "state":"In Process",
+    "state":"In Progress",
     "due_date": "2022-04-22",
     "project_id": 4
   },
   {
     "title":"Create Main Page HTML",
     "description":"Generate HTML with handlebars for the main page.",
-    "state":"Done",
+    "state":"Finished",
     "due_date": "2022-04-22",
     "project_id": 4
   },
   {
     "title":"Create Models",
     "description":"Create Models for all databases.",
-    "state":"In Process",
+    "state":"In Progress",
     "due_date": "2022-04-22",
     "project_id": 5
   },
