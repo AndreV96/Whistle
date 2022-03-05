@@ -40,11 +40,11 @@
           <div class="card-body">
             <div class="row ">
               <div class="col">
-                <span style="font-weight: 600; color: #5bc0be; font-size: 18px;">{{title}}</span>
+                <span style="font-weight: 600; font-size: 18px;">{{title}}</span>
                 <span class="card-subtitle mb-2 text-muted"> Due date: {{format_date due_date}}</span>
                 <p class="card-text">{{description}}</p>
               </div>
-              <div class="col" style="text-align: end;">
+              <div class="col btn-col" style="text-align: end;">
                 <div class="btn-group" role="group{{title}}" aria-label="{{task}}-radio-btns">
                   <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-pending" autocomplete="off">
                   <label class="btn btn-outline-primary" for="{{title}}-pending">Pending</label>
@@ -55,7 +55,10 @@
                   <input type="radio" class="btn-check" name="{{title}}-status" id="{{title}}-finished" autocomplete="off">
                   <label class="btn btn-outline-primary" for="{{title}}-finished">Finished</label>
                 </div>
+                <div>
+             <button type="button" class="btn btn-danger" id="delete-task" style="width: 10rem; font-weight: 600; font-size: 16px;">Delete Task</button>
 
+                </div>
               </div>
             </div>
           </div>

@@ -28,12 +28,14 @@
     <div class="card projects">
       <div class="card-body">
         <div class="row ">
-          <div class="col-10">
-            <a href="/projects/{{project.id}}" class="project-title">{{project.title}}</a>
+          <div class="col-9">
+            <a href="/projects/{{project.id}}" class="project-title" style="font-weight: 600;">{{project.title}}</a>
             <p class="card-text">{{project.description}}</p>
           </div>
-          <div class="col-2">
-              <button  onclick="viewProject({{project.id}})" type="button" class="btn btn-primary btn-sm editProjectBttn"style="width: 10rem; font-weight: 600; font-size: 16px">Go To Project</button>
+          <div class="col-3 btn-col" style="text-align: right;">
+              <button  onclick="viewProject({{project.id}})" type="button" class="btn btn-primary" style="width: 10rem; font-weight: 600; font-size: 16px">Go To Project</button>
+
+              <button type="button" class="btn btn-danger" id="delete-project" style="width: 10rem; font-weight: 600; font-size: 16px;">Delete Project</button>
           </div>
         </div>
         </div>
