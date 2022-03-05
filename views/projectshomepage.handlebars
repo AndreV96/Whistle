@@ -64,7 +64,12 @@
             <label for='description' class='form-label'>Description</label>
             <textarea type='text' class='form-control' id='description' rows="4"></textarea>
           </div>
-          <button type='submit' class='btn btn-primary'>Add project</button>
+          <div>
+            {{#each employees as |employee| }}
+              h5 class="card-title">{{first_name}} {{last_name}}</h5>
+            {{/each}}
+          </div>
+          <button data-id="{{id}}" id="createProjectBttn" type='submit' class='btn btn-primary'>Add project</button>
         </form>
       </div>
     </div>

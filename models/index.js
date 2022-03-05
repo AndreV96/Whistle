@@ -1,6 +1,6 @@
-const Employee = require('./Employee');
-const Projects = require('./Projects');
-const Tasks = require('./Tasks');
+const Employee = require('./employee');
+const Projects = require('./projects');
+const Tasks = require('./tasks');
 const ProjectMembers = require('./ProjectMembers');
 
 Employee.hasMany(Tasks, {

@@ -80,7 +80,7 @@
         <form id='new-project-form'>
           <div class='mb-3'>
             <label for='title' class='form-label'>Title</label>
-            <input type='text' class='form-control' id='title' />
+            <input type='text' class='form-control' id='title' data-id="{{id}}" />
           </div>
           <div class='mb-3'>
             <label for='description' class='form-label'>Description</label>
@@ -91,7 +91,7 @@
         <input type="date" id="dueDate" name="due-date" value="2022-03-06"
        min="2022-03-01" max="2025-12-31">
         </div>
-          <button type='submit' class='btn btn-primary'>Add task</button>
+          <button id="addTaskBttn" type='submit' class='btn btn-primary'>Add task</button>
         </form>
       </div>
     </div>

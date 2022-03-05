@@ -2,9 +2,8 @@
   {
     "title":"Create GET routes",
     "description":"Create GET routes to obtain all the information and obtaing information by id for all databases.",
-    "state":"To Do",
+    "state":"Pending",
     "due_date": "2022-04-22",
-    "employee_id": 1,
     "project_id": 1
   },
   {
@@ -12,7 +11,6 @@
     "description":"Create seeds for all databases.",
     "state":"In Process",
     "due_date": "2022-04-22",
-    "employee_id": 1,
     "project_id": 1
   },
   {
@@ -20,7 +18,6 @@
     "description":"Generate HTML with handlebars for the main page.",
     "state":"Done",
     "due_date": "2022-04-22",
-    "employee_id": 4,
     "project_id": 2
   },
   {
@@ -28,23 +25,20 @@
     "description":"Create Models for all databases.",
     "state":"In Process",
     "due_date": "2022-04-22",
-    "employee_id": 3,
     "project_id": 2
   },
   {
     "title":"Create POST Routes",
     "description":"Create POST routes for all databases.",
-    "state":"To Do",
+    "state":"Pending",
     "due_date": "2022-04-22",
-    "employee_id": 5,
     "project_id": 3
   },
   {
     "title":"Create GET routes",
     "description":"Create GET routes to obtain all the information and obtaing information by id for all databases.",
-    "state":"To Do",
+    "state":"Pending",
     "due_date": "2022-04-22",
-    "employee_id": 6,
     "project_id": 3
   },
   {
@@ -52,7 +46,6 @@
     "description":"Create seeds for all databases.",
     "state":"In Process",
     "due_date": "2022-04-22",
-    "employee_id": 7,
     "project_id": 4
   },
   {
@@ -60,7 +53,6 @@
     "description":"Generate HTML with handlebars for the main page.",
     "state":"Done",
     "due_date": "2022-04-22",
-    "employee_id": 9,
     "project_id": 4
   },
   {
@@ -68,15 +60,13 @@
     "description":"Create Models for all databases.",
     "state":"In Process",
     "due_date": "2022-04-22",
-    "employee_id": 9,
     "project_id": 5
   },
   {
     "title":"Create POST Routes",
     "description":"Create POST routes for all databases.",
-    "state":"To Do",
+    "state":"Pending",
     "due_date": "2022-04-22",
-    "employee_id": 10,
     "project_id": 5
   }
 ]
